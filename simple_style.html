@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Filemaker Style</title>
+  <style>
+    html {
+      font-size: 16px;
+      font-family: Helvetica, Arial, sans-serif;
+      font-weight: lighter;
+    }
+
+    body {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+
+    hr {
+      border: none;
+      color: gray;
+      background-color: gray;
+      height: 1px;
+    }
+
+    .color {
+      font-family: monospace;
+      padding: 3px;
+      border-radius: 3px;
+    }
+
+    .example {
+      display: inline-grid;
+      grid-template: 50px auto 40px / auto;
+      color: #717171;
+      font-weight: normal;
+      font-size: 12px;
+      background-color: rgba(255,255,255,0);
+      box-shadow: 0.5em 0.5em 2em gray;
+      border-radius: 5px;
+    }
+
+    .header {
+      display: grid;
+      grid-template: 1fr / 50px 1fr 50px;
+      background-color: #333333;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 24px;
+      text-align: center;
+      line-height: 50px;
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .home {
+      padding: 10px;
+      padding-top: 7px;
+      max-height: 30px;
+    }
+
+    .home > svg:hover path{
+      cursor: pointer;
+      fill: #3462a8;
+    }
+
+    .login:hover {
+      cursor: pointer;
+      color: #3462a8;
+    }
+
+    .body {
+      display: grid;
+      grid-template: auto auto / 1fr;
+      background-color: #f0f0f0;
+      padding: 10px;
+    }
+
+    .footer {
+      background-color: #fafafa;
+      text-align: center;
+      line-height: 40px;
+      border-top: 1px solid #cdcdcd;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+    }
+
+    .input {
+      display: grid;
+      grid-template: auto auto / 1fr;
+      margin: 10px;
+    }
+
+    .label {
+      font-size: 18px;
+    }
+
+    .input>input {
+      background-color: #ffffff;
+      color: #000000;
+      font-size: 24px;
+      padding: 5px;
+      border: 1px solid #cdcdcd;
+      border-radius: 3px;
+    }
+
+    .save {
+      display: grid;
+      grid-template: auto / auto;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .save>input {
+      background-color: #3462a8;
+      color: #ffffff;
+      font-weight: bold;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      padding: 10px;
+      margin: 5px;
+    }
+
+    .save>input:hover {
+      cursor: pointer;
+      background-color: #4d77be;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Описание единого стиля для filemaker-приложений</h1>
+  <h2>Цвета</h2>
+  <h3>Фон</h3>
+  <p>
+    <span class="color" style="background-color:#f0f0f0">#f0f0f0</span> - body<sub>default</sub>
+  </p>
+  <p>
+    <span class="color" style="background-color:#fafafa">#fafafa</span> - footer<sub>default</sub>
+  </p>
+  <p>
+    <span class="color" style="background-color:#333333;color:white">#333333</span> - header<sub>default</sub>
+  </p>
+  <p>
+    <span class="color" style="background-color:#3462a8;color:white">#3462a8</span> - обычные кнопки, кнопки навигации и вкладки при наведении
+  </p>
+  <p>
+    <span class="color" style="background-color:#4d77be;color:white">#4d77be</span> - обычные кнопки при наведении<sup>*</sup>
+  </p>
+  <p>
+    <span class="color" style="background-color:#c24200;color:white">#c24200</span> - кнопки негативного исхода
+  </p>
+  <p>
+    <span class="color" style="background-color:#5a9910;color:white">#5a9910</span> - кнопки позитивного исхода
+  </p>
+  <p>
+    <span class="color" style="background-color:#ffffff">#ffffff</span> - поле ввода
+  </p>
+  <p style="font-size:0.8em"><i>* - кнопки при наведении чуть светлее, а при нажатии чуть темнее своего обычного состояния</i></p>
+  <h3>Текст</h3>
+  <p>
+    <span class="color" style="background-color:#717171;color:white">#717171</span> - основной текст<sub>#707070 - default</sub>
+  </p>
+  <p>
+    <span class="color" style="background-color:#ffffff">#ffffff</span> - заголовки и кнопки
+  </p>
+  <p>
+    <span class="color" style="background-color:#3462a8;color:white">#3462a8</span> - кнопки навигации при наведении, активные вкладки
+  </p>
+  <p>
+    <span class="color" style="background-color:#a8184b;color:white">#a8184b</span> - предупреждения
+  </p>
+  <p>
+    <span class="color" style="background-color:#000000;color:white">#000000</span> - поле ввода
+  </p>
+  <hr>
+  <h2>Шрифты</h2>
+  <p>Arial - шрифт по умолчанию. В html рекомендуется css <code>font-family: Helvetica, Arial, sans-serif;</code></p>
+  <h2>Прочее</h2>
+  <p>
+    Кнопки скруглены
+  </p>
+  <p>
+    Минимум необходимого пространства не в ущерб удобству
+  </p>
+  <p>
+    Использование стандартных иконок для кнопок
+  </p>
+  <hr>
+  <h2>Пример</h2>
+  <p>
+    <div class="example">
+      <div class="header">
+        <div class="home">
+          <svg viewbox="0 0 80 80">
+            <path d="M 0 40 l 10 0 l 0 40 l 20 0 l 0 -30
+          l 20 0 l 0 30 l 20 0 l 0 -40 l 10 0 l -40 -40 z" fill="#ffffff"/>
+          </svg>
+        </div>
+        <div class="title">Example</div>
+        <div class="login">?</div>
+      </div>
+      <div class="body">
+        <div class="input">
+          <div class="label">Поле ввода</div>
+          <input type="text" value="" placeholder="Введите текст" autocomplete="none" maxlength="12">
+        </div>
+        <div class="save">
+          <input type="button" value="Сохранить">
+        </div>
+      </div>
+      <div class="footer">
+        <div class="version">
+          version 1.10.4
+        </div>
+      </div>
+    </div>
+  </p>
+  <br>
+</body>
+
+</html>
